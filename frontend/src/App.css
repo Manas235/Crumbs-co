@@ -1,0 +1,184 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #2f170d;
+  background: #fff9f4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: #ffe0c7;
+  color: #7f3f10;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.75rem);
+  margin: 0;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 1.5rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(80, 43, 23, 0.08);
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 0.9rem;
+}
+
+.category {
+  margin: 0;
+  color: #7f3f10;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.card-content h3 {
+  margin: 0.3rem 0;
+}
+
+.card-content p {
+  color: #5b3a2a;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+button {
+  border: none;
+  border-radius: 0.65rem;
+  background: #9e4f20;
+  color: white;
+  padding: 0.5rem 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.checkout-panel {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1rem;
+  height: fit-content;
+  box-shadow: 0 8px 22px rgba(80, 43, 23, 0.1);
+}
+
+.checkout-panel ul {
+  list-style: none;
+  padding: 0;
+}
+
+.checkout-panel li {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.checkout-panel li p {
+  margin: 0;
+  color: #885f49;
+}
+
+.qty-control {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.qty-control button {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+}
+
+.totals {
+  border-top: 1px dashed #d8b9a8;
+  padding-top: 0.75rem;
+}
+
+.totals p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grand-total {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+form {
+  display: grid;
+  gap: 0.55rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid #e4cab8;
+  border-radius: 0.6rem;
+  padding: 0.6rem;
+  font: inherit;
+}
+
+.error {
+  color: #9f1a1a;
+}
+
+.success {
+  color: #1a7c32;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
